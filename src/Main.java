@@ -11,21 +11,21 @@ public class Main {
         Pessoa pessoa5 = new Pessoa("Yuri", pessoa4);
 
 
-        var aux = pessoa5.getPai();
+        var aux = pessoa5;
 
-        for (int i = 0; i < 4; i++) {
-            if (aux.getNome() == "Antonio") {
-                System.out.println("O nome do seu tataravô  é : " + aux.getNome());
-                break;
-            } else {
-                System.out.println(aux.getNome());
-                aux = aux.getPai();
 
-            }
+        while (!(aux.getPai() == null)) {
+
+            aux = aux.getPai();
 
         }
 
 
+        System.out.println("O nome do seu tataravô é : " + aux.getNome());
 
     }
 }
+
+
+
+
